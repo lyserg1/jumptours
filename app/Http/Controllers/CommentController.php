@@ -8,6 +8,10 @@ use App\Business;
 
 class CommentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function save(Request $request){
 		
 		// Validación

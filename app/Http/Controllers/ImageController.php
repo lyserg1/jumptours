@@ -13,6 +13,12 @@ use App\Business;
 
 class ImageController extends Controller
 {
+
+	public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function getImage($filename){
 		$file = Storage::disk('images')->get($filename);
 		return new Response($file, 200);
@@ -119,14 +125,14 @@ class ImageController extends Controller
 		
 
 		foreach ($business as $busin) {
-		if($user && $image && $image->business->id == $busin->id){
-			return view('image.edit', [
-				'image' => $image
-			]);
-		}else{
-			return redirect()->route('home');
-		}
-	}
+
+        if($user && $image && $image->business->id == $busin->id){
+            return view('image.edit', [
+                'image' => $image
+            ]);
+            }
+        }
+        return redirect()->route('home');
 	}
 
 	public function update(Request $request){

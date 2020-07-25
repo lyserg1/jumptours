@@ -14,6 +14,10 @@ use App\Like;
 
 class BusinessController extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function create(){
 		return view('business.register');
     }
@@ -152,7 +156,7 @@ class BusinessController extends Controller
 
 	public function edit($id){
 
-		$business = Business::find($id)->first();
+		$business = Business::find($id);
 		
 		return view('business.edit', [
 			'business' => $business

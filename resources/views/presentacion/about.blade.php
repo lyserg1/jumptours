@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bx bx-images" style="color:rgb(255, 255, 255);"></i>
-                  <h4 class="section-title">Imagenes y Videos</h4>
-                  <p class="tipografia">Administra o visualiza todo el contenido que quieras, como imagenes y videos</p>
+                  <h4 class="section-title">Imagenes y Comentarios</h4>
+                  <p class="tipografia">Administra o visualiza todo el contenido que quieras, como imagenes y Comentarios</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                   <i class="bx bx-shield" style="color:rgb(255, 255, 255);"></i>
